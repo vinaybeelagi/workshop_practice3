@@ -3,10 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop Practice 3</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Collapsible Sidebar</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #333;
+            position: fixed;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 20px;
+            padding-left: 10px;
+            color: white;
+        }
+
+        #main {
+            margin-left: 0;
+            padding: 16px;
+            transition: margin-left 0.5s;
+        }
+
+        #main.shifted {
+            margin-left: 250px;
+        }
+
+        #sidebarCollapse {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            background-color: #333;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        #sidebar img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div id="sidebar">
+        <img id="sidebarImage" src="https://via.placeholder.com/250x150" alt="Initial Sidebar Image">
+        <h2>Sidebar</h2>
+        <!-- Sidebar content goes here -->
+    </div>
+
+    <div id="main">
+        <button id="sidebarCollapse" onclick="toggleSidebar()">≡</button>
+        <h2>Main Content</h2>
+        <!-- Main content goes here -->
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const main = document.getElementById('main');
+            const sidebarImage = document.getElementById('sidebarImage');
+
+            if (main.classList.contains('shifted')) {
+                sidebar.style.width = '160px';
+                main.classList.remove('shifted');
+                sidebarImage.src = 'https://via.placeholder.com/250x150';
+            } else {
+                sidebar.style.width = '300px';
+                main.classList.add('shifted');
+                sidebarImage.src = 'https://via.placeholder.com/250x250'; // Change the image source after clicking
+            }
+        }
+    </script>
+
 </body>
 </html>
