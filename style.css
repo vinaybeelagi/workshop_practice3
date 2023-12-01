@@ -1,21 +1,61 @@
 #pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-  }
-  
-  #pagination a.active {
-    background-color: dodgerblue;
-    color: white;
-  }
-  
-  #pagination a:hover:not(.active) {background-color: #ddd;}
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
 
-  .bg-gradient-to-r {
-    background: linear-gradient(to right, var(--tw-gradient-stops));
+#pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#pagination a:hover:not(.active) {background-color: #ddd;}
+
+.bg-gradient-to-r {
+  background: linear-gradient(to right, var(--tw-gradient-stops));
 }
 .custom-bg {
-  background: rgba(255, 255, 255, 0.96);
+background: rgba(255, 255, 255, 0.96);
+}
+#container {
+position: relative;
+}
+#sidebarCollapse {
+
+top: 50%;
+transform: translateY(-50%);
+left: 0;
+content: ">";
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background-color: #D9D9D9;
+border: none;
+cursor: pointer;
+}
+
+/* #sidebarCollapse::after {
+content: "<";
+font-size: 24px;
+color:black;
+display: flex;
+justify-content: center;
+background-color: gray;
+align-items: center;
+height: 100%;
+border-radius: 50%;
+} */
+
+.circle-btn {
+width: 40px;
+height: 40px;
+background-color: #3490dc;
+border-radius: 50%;
+cursor: pointer;
+}
+
+#sidebar {
+width: 300px;
 }
