@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -9,26 +10,26 @@
   </head>
   <body>
     <div
-      id="container" class="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 h-screen flex justify-between"
+      id="container" class="bg-gradient-to-r from-[#101010] via-[#101010] to-[#333D33] h-screen flex justify-between"
     >
       <aside id="sidebar" class="h-screen flex flex-col ml-10 pt-6 w-[160px] relative">
-        <button id="sidebarCollapse" onclick="toggleSidebar()" class="absolute " style="top:48px;left:155px;" ></button>
+        <button id="sidebarCollapse" onclick="toggleSidebar()" class="absolute" style="top:48px;left:155px; "  > </button>
 
         <img src="/assets/Group 1.svg" id="sidebarImage" class="w-[78px] h-9 flex-shrink-0"  alt="" />
 
         <div class="mt-[72px] ml-7">
           <div  class="flex ">
-            <div class="w-1 h-6 bg-green-500 left-0"></div>
+            <div class="w-1 h-6 bg-green-500 !ml-0 green-div"></div>
             <img src="/assets/Frame 675.svg" class="w-6 h-6 mb-4" alt="" />
             <span id="tab_one_name" class=" text-white text-lg font-medium">Accounts Receivable</span>
           </div>
           <div class="flex">
-          <img src="/assets/dollar 1.svg" class="w-6 h-6" alt=" " />
+          <img src="./assets/Frame dolllar1.svg" class="w-6 h-6" alt=" " />
           <span id="tab_two_name" class=" text-[#828282] text-lg font-medium">Payments</span>
         </div>
         </div>
       </aside>
-      <main id="main" class="w-[1700px] custom-bg rounded-3xl m-4 flex-grow">
+      <main id="main" class="w-[1700px] custom-bg rounded-3xl m-4 ">
         <header class="flex justify-between m-4 px-4">
           <div class="text-2xl font-semibold color-[#262A41]">
             Accounts Receivable
@@ -53,7 +54,7 @@
           <div class="flex d-flex align-items-center">
             <div class="pt-5">
               <img
-                src="/assets/Frame 1000001213.svg"
+                src="./assets/Frame dollar2.svg"
                 class="w-18 h-18"
                 alt=""
               />
@@ -73,7 +74,7 @@
           <div class="flex d-flex align-items-center">
             <div class="pt-5">
               <img
-                src="/assets/Frame 1000001213 (1).svg"
+                src="./assets/Frame dollar3.svg"
                 class="w-18 h-18 pl-8"
                 alt=""
               />
@@ -112,19 +113,19 @@
           </div>
         </div>
 
-        <div class=" bg-white rounded-lg mx-7 mt-5">
+        <div class=" bg-white rounded-lg mx-7 mt-5 ">
           <div class="flex justify-between">
             <div class="text-center mb-1 relative ml-6 mt-5">
-              <div class="flex items-center">
+              <div class="flex justify-start items-center p-2 gap-2 flex-shrink-0 w-[300px]">
                 <img
                   src="/assets/Icons.svg"
                   alt="Search Icon"
-                  class="w-6 h-6 ml-2 absolute"
+                  class="w-4 h-4 ml-2 mt-1 flex-shrink-0 absolute"
                 />
                 <input
                   type="text"
                   placeholder="Search here"
-                  class="py-4 rounded-md border border-solid border-gray-300 bg-white w-[500px] bg-transparent h-6 pl-12"
+                  class="py-4  rounded-md border text-black text-opacity-50 border-solid border-gray-300 bg-white w-[300px] bg-transparent text-sm font-normal h-6 pl-7"
                 />
               </div>
             </div>
@@ -149,11 +150,11 @@
               </button>
             </div>
           </div>
-          <div class="mx-auto flex-1 my-8 bg-white p-8 rounded ">
+          <div class="mx-auto flex-1  bg-white p-8 rounded ">
             
-              <table class="table-auto w-full overflow-y-auto">
+              <table class="table-auto w-full overflow-y-auto px-2 py-4">
                 <tr
-                  class="border-b border-solid border-gray-300 bg-opacity-50 bg-gray-300 max-h-[50px] text-left"
+                  class="border-b border-solid bg-[#efefef80] bg-opacity-50 border-b-[#E8E8E8]  mb-8 text-left h-[50px]"
                 >
                   <th class="w-1/5  pl-2"> 
                     <div> Head </div>
@@ -168,7 +169,7 @@
                 </tr>
 
                 <tbody id="myTable">
-                  <tr class="text-center max-h-[50px] border-b border-solid border-gray-300 text-left " >
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 text-left mb-4 h-10 " >
                     <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
                       <div class="">
                         <img
@@ -194,7 +195,7 @@
                     <td class="w-1/5 text-left">$10,000,000</td>
                     <td class="w-1/5 text-[#27AE60] text-left">Processed</td>
                   </tr>
-                  <tr class="text-center max-h-[50px] border-b border-solid border-gray-300  " >
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 mb-4 h-10 " >
                     <td class="w-1/5"><div class="flex d-flex align-items-center justify-start">
                       <div class="">
                         <img
@@ -220,7 +221,7 @@
                     <td class="w-1/5 text-left">$10,000,000</td>
                     <td class="w-1/5 text-[#64748B] text-left">Cancelled</td>
                   </tr>
-                  <tr class="text-center max-h-[50px] border-b border-solid border-gray-300 text-left " >
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 text-left mb-4 h-10 " >
                     <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
                       <div class="">
                         <img
@@ -246,7 +247,7 @@
                     <td class="w-1/5 text-left">$10,000,000</td>
                     <td class="w-1/5 text-[#EB5757] text-left">Failed</td>
                   </tr>
-                  <tr class="text-center max-h-[50px] border-b border-solid border-gray-300 text-left " >
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 text-left mb-4 h-10 " >
                     <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
                       <div class="">
                         <img
@@ -272,7 +273,7 @@
                     <td class="w-1/5 text-left">$10,000,000</td>
                     <td class="w-1/5 text-[#EB5757] text-left">Failed</td>
                   </tr>
-                  <tr class="text-center max-h-[50px] border-b border-solid border-gray-300 " >
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300  mb-4 h-10" >
                     <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
                       <div class="">
                         <img
@@ -299,7 +300,7 @@
                     <td class="w-1/5 text-[#2F80ED] text-left">Pending</td>
                   </tr>
                  
-                  <tr class="text-center max-h-[50px] border-b border-solid border-gray-300 text-left " >
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 text-left mb-4 h-10 " >
                     <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
                       <div class="">
                         <img
@@ -325,7 +326,7 @@
                     <td class="w-1/5 text-left">$10,000,000</td>
                     <td class="w-1/5 text-[#64748B] text-left">Cancelled</td>
                   </tr>
-                  <tr class="text-center max-h-[50px] border-b border-solid border-gray-300 " >
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 mb-4 h-10 " >
                     <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
                       <div class="">
                         <img
@@ -351,7 +352,7 @@
                     <td class="w-1/5 text-left">$10,000,000</td>
                     <td class="w-1/5 text-[#27AE60] text-left">Processed</td>
                   </tr>
-                  <tr class="text-center max-h-[50px] border-b border-solid border-gray-300 " >
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 mb-4 h-10 " >
                     <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
                       <div class="">
                         <img
@@ -377,7 +378,7 @@
                     <td class="w-1/5 text-left">$10,000,000</td>
                     <td class="w-1/5 text-[#2F80ED] text-left">Pending</td>
                   </tr>
-                  <tr class="text-center max-h-[50px] border-b border-solid border-gray-300 " >
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 mb-4 " >
                     <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
                       <div class="">
                         <img
@@ -406,16 +407,17 @@
                 </tbody>
               </table>
            
-            <div class="flex justify-center mt-4" id="pagination">
-              <a href="#">&laquo;</a>
-              <a class="active" href="#">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">6</a>
-              <a href="#">&raquo;</a>
-            </div>
+            
+          </div>
+          <div class="flex justify-center mt-auto " id="pagination">
+            <a href="#">&laquo;</a>
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
           </div>
           <script src="script.js"></script>
         </div>
