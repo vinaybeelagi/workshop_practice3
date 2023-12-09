@@ -1,38 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagination Design</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      id="container" class="bg-gradient-to-r from-[#101010] via-[#101010] to-[#333D33] h-screen flex justify-between"
+    >
+      <aside id="sidebar" class="h-screen flex flex-col items-center  pt-6 w-[175px] relative">
+        <button id="sidebarCollapse" onclick="toggleSidebar()" class="absolute" style="top:48px;left:175px; "  > </button>
 
-    .pagination {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      justify-content: center;
-      align-items: center;
-    }
+        <img src="/assets/Group 1.svg" id="sidebarImage" class="w-[78px] h-9 flex-shrink-0"  alt="" />
 
-    .pagination li {
-      margin: 0 5px;
-    }
+        <div id="icon" class="mt-[72px] w-full">
+          <div  class="flex w-full ">
 
-    .pagination a, .pagination input {
-      padding: 8px;
-      text-decoration: none;
-      border: 1px solid #ccc;
-      cursor: pointer;
-      color: #333;
-      background-color: #fff;
-    }
+            <div class="w-1 h-6 bg-green-500 mr-6 green-div"></div>
+           
+            <img src="/assets/Frame 675.svg" class="w-6 h-6 mb-4 mr-3" alt="" />
+            <span id="tab_one_name" class=" text-white text-lg font-medium">Accounts Receivable</span>
+         
+          </div>
+          <div id="payment" class="flex ml-7 ">
+          <img src="/assets/dollar 1.svg" class="w-6 h-6 mr-3 " alt=" " />
+          <span id="tab_two_name" class=" text-[#828282] text-lg font-medium">Payments</span>
+        </div>
+        </div>
+      </aside>
+      <main id="main" class="w-[1700px] custom-bg rounded-3xl m-4 ">
+        <header class="flex justify-between m-4 px-4">
+          <div class="text-2xl font-semibold color-[#262A41]">
+            Accounts Receivable
+          </div>
+          <div class="flex items-center relative">
+            <span>
+              <img
+                src="/assets/Group 1000001530.svg"
+                class="mr-6 relative"
+                alt=""
+              />
+              <img
+                src="/assets/Group 2.svg"
+                class="absolute top-[-3px] right-[55px]"
+                alt=""
+              />
+            </span>
+            <img src="/assets/Ellipse 6.svg" alt="" />
+          </div>
+        </header>
+        <div class="h-[96px] bg-white rounded-lg mx-7 flex justify-around">
+          <div class="flex d-flex align-items-center">
+            <div class="pt-5 pr-2">
+              <img
+                src="./assets/Frame dolllar1.svg"
+                class="w-18 h-18"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col pt-5">
+              <span
+                class="flex text-grey-1-place-holder font-inter text-base font-medium leading-6"
+                >Request Raised
+                <img src="/assets/info 1.svg" class="w-4 h-4" alt=""
+              /></span>
+              <span
+                class="text-dark-gray-dark-gray-2 font-inter text-2xl font-bold"
+                >$312.73K</span
+              >
+            </div>
+          </div>
+          <div class="flex d-flex align-items-center">
+            <div class="pt-5 pr-2">
+              <img
+                src="./assets/Frame dollar2.svg"
+                class="w-18 h-18 pl-8"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col pt-5">
+              <span
+                class="flex text-grey-1-place-holder font-inter text-base font-medium leading-6"
+                >Pending Payment
+                <img src="/assets/info 1.svg" class="w-4 h-4" alt=""
+              /></span>
+              <span
+                class="text-dark-gray-dark-gray-2 font-inter text-2xl font-bold"
+                >$312.73K</span
+              >
+            </div>
+          </div>
+          <div class="flex d-flex align-items-center">
+            <div class="pt-5 pr-2">
+              <img
+                src="./assets/Frame dollar3.svg"
+                class="w-18 h-18 pl-8"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col pt-5">
+              <span
+                class="flex text-grey-1-place-holder font-inter text-base font-medium leading-6"
+                >Cash Received
+                <img src="/assets/info 1.svg" class="w-4 h-4" alt=""
+              /></span>
+              <span
+                class="text-dark-gray-dark-gray-2 font-inter text-2xl font-bold"
+                >$312.73K</span
+              >
+            </div>
+          </div>
+        </div>
 
-    .pagination a
+        <div class=" bg-white rounded-lg mx-7 mt-5   ">
+          <div class="flex justify-between">
+            <div class="text-center mb-1 relative ml-6 mt-5">
+              <div class="flex justify-start items-center p-2 gap-2 flex-shrink-0 w-[300px]">
+                <img
+                  src="/assets/Icons.svg"
+                  alt="Search Icon"
+                  class="w-4 h-4 ml-2 mt-1 flex-shrink-0 absolute"
+                />
+                <input
+                  type="text"
+                  placeholder="Search here"
+                  class="py-4  rounded-md border text-black text-opacity-50 border-solid border-gray-300 bg-white w-[300px] bg-transparent text-sm font-normal h-6 pl-7"
+                />
+              </div>
+            </div>
+
+            <div class="flex items-center relative mr-6 mt-3">
+              <img
+                src="/assets/Frame 1000001540.svg"
+                alt="Adjacent Image"
+                class="w-10 h-10 mr-3"
+              />
+
+              <button
+                class="bg-black text-white py-3 rounded ml-2 h-8 font-semibold px-3 flex items-center justify-center"
+              >
+                AR Request
+                <img
+                  src="/assets/Plus 24px.svg"
+                  class="color-white ml-2"
+                  alt=""
+                  srcset=""
+                />
+              </button>
+            </div>
+          </div>
+          <div class="mx-auto flex-1 bg-white p-8 rounded overflow-y-auto max-h-[550px]">
+            
+              <table class="table-auto w-full px-2 py-4">
+                <tr
+                  class="border-b border-solid bg-[#efefef80] bg-opacity-50 border-b-[#E8E8E8] h-[50px]  mb-8 text-left "
+                >
+                  <th class="w-1/5  pl-2"> 
+                    <div> Head </div>
+                  <div class="flex">
+                    <div class="border-solid border-transparent border-5 border-b-7 cursor-pointer"></div>
+                    <div class="border-solid border-transparent border-5 border-t-7 cursor-pointer mt-1"></div>
+                  </div></th>
+                  <th class="w-1/5">Request Id</th>
+                  <th class="w-1/5">Request Date</th>
+                  <th class="w-1/5">Request Amount</th>
+                  <th class="w-1/5">Status</th>
+                </tr>
+
+                <tbody id="myTable">
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 text-left mb-4 h-10 " >
+                    <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
+                      <div class="">
+                        <img
+                          src="/assets/table_image.svg"
+                          class="w-6 h-6 m-1 "
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col items-center ">
+                        <span
+                          class="flex text-black text-sm font-medium"
+                          > Exxon Mobil
+                        
+                        </span>
+                        <span
+                          class="text-xs font-normal text-gray-500 leading-3 mr-9 "
+                          >Alaska</span
+                        >
+                      </div>
+                    </div></td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">$10,000,000</td>
+                    <td class="w-1/5 text-[#27AE60] text-left">Processed</td>
+                  </tr>
+                  <tr class="text-center h-[50px]  border-b border-solid border-gray-300 mb-4 h-10 " >
+                    <td class="w-1/5"><div class="flex d-flex align-items-center justify-start">
+                      <div class="">
+                        <img
+                          src="/assets/table_image.svg"
+                          class="w-6 h-6 m-1 "
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col items-center  ">
+                        <span
+                          class="flex text-black text-sm font-medium ml-0"
+                          > Bekshire Hathaway
+                        
+                        </span>
+                        <span
+                          class="text-xs font-normal text-gray-500 leading-3 mr-[75px] "
+                          >Arizona</span
+                        >
+                      </div>
+                    </div></td>
+                    <td class="w-1/5 text-left ">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">$10,000,000</td>
+                    <td class="w-1/5 text-[#64748B] text-left">Cancelled</td>
+                  </tr>
+                  <tr class="text-center  h-[50px] border-b border-solid border-gray-300 text-left mb-4 h-10 " >
+                    <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
+                      <div class="">
+                        <img
+                          src="/assets/table_image.svg"
+                          class="w-6 h-6 m-1 "
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col items-center ">
+                        <span
+                          class="flex text-black text-sm font-medium"
+                          > Alphabet
+                        
+                        </span>
+                        <span
+                          class="text-xs font-normal text-gray-500 leading-3 "
+                          >Arkansas</span
+                        >
+                      </div>
+                    </div></td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">$10,000,000</td>
+                    <td class="w-1/5 text-[#EB5757] text-left">Failed</td>
+                  </tr>
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 text-left mb-4 h-10 " >
+                    <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
+                      <div class="">
+                        <img
+                          src="/assets/table_image.svg"
+                          class="w-6 h-6 m-1 "
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col items-center ">
+                        <span
+                          class="flex text-black text-sm font-medium"
+                          > Alphabet
+                        
+                        </span>
+                        <span
+                          class="text-xs font-normal text-gray-500 leading-3 "
+                          >Arkansas</span
+                        >
+                      </div>
+                    </div></td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">$10,000,000</td>
+                    <td class="w-1/5 text-[#EB5757] text-left">Failed</td>
+                  </tr>
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300  mb-4 h-10" >
+                    <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
+                      <div class="">
+                        <img
+                          src="/assets/table_image.svg"
+                          class="w-6 h-6 m-1 "
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col items-center ">
+                        <span
+                          class="flex text-black text-sm font-medium"
+                          > Alphabet
+                        
+                        </span>
+                        <span
+                          class="text-xs font-normal text-gray-500 leading-3 "
+                          >Arkansas</span
+                        >
+                      </div>
+                    </div></td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">$10,000,000</td>
+                    <td class="w-1/5 text-[#2F80ED] text-left">Pending</td>
+                  </tr>
+                 
+                  <tr class="text-center h-[50px] border-b border-solid border-gray-300 text-left mb-4 h-10 " >
+                    <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
+                      <div class="">
+                        <img
+                          src="/assets/table_image.svg"
+                          class="w-6 h-6 m-1 "
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col items-center ">
+                        <span
+                          class="flex text-black text-sm font-medium"
+                          > Alphabet
+                        
+                        </span>
+                        <span
+                          class="text-xs font-normal text-gray-500 leading-3 "
+                          >Alaska</span
+                        >
+                      </div>
+                    </div></td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">$10,000,000</td>
+                    <td class="w-1/5 text-[#64748B] text-left">Cancelled</td>
+                  </tr>
+                  <tr class="text-center border-b border-solid border-gray-300 mb-4 h-10 " >
+                    <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
+                      <div class="">
+                        <img
+                          src="/assets/table_image.svg"
+                          class="w-6 h-6 m-1 "
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col items-center ">
+                        <span
+                          class="flex text-black text-sm font-medium"
+                          > Alphabet
+                        
+                        </span>
+                        <span
+                          class="text-xs font-normal text-gray-500 leading-3 "
+                          >Arkansas</span
+                        >
+                      </div>
+                    </div></td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">$10,000,000</td>
+                    <td class="w-1/5 text-[#27AE60] text-left">Processed</td>
+                  </tr>
+                  <tr class="text-center h-[50px]  border-b border-solid border-gray-300 mb-4 h-10 " >
+                    <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
+                      <div class="">
+                        <img
+                          src="/assets/table_image.svg"
+                          class="w-6 h-6 m-1 "
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col items-center ">
+                        <span
+                          class="flex text-black text-sm font-medium"
+                          > Alphabet
+                        
+                        </span>
+                        <span
+                          class="text-xs font-normal text-gray-500 leading-3 "
+                          >Arkansas</span
+                        >
+                      </div>
+                    </div></td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">$10,000,000</td>
+                    <td class="w-1/5 text-[#2F80ED] text-left">Pending</td>
+                  </tr>
+                  <tr class="text-center h-[50px]  border-b border-solid border-gray-300 mb-4 " >
+                    <td class="w-1/5"><div class="flex d-flex align-items-center text-left">
+                      <div class="">
+                        <img
+                          src="/assets/table_image.svg"
+                          class="w-6 h-6 m-1 "
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-col items-center ">
+                        <span
+                          class="flex text-black text-sm font-medium"
+                          > Alphabet
+                        
+                        </span>
+                        <span
+                          class="text-xs font-normal text-gray-500 leading-3 "
+                          >Arkansas</span
+                        >
+                      </div>
+                    </div></td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">Exxon Mobil</td>
+                    <td class="w-1/5 text-left">$10,000,000</td>
+                    <td class="w-1/5 text-[#2F80ED] text-left">Pending</td>
+                  </tr>
+                </tbody>
+              </table>
+           
+            
+          </div>
+          <div class=" flex justify-around mt-auto " id="pagination">
+            <div></div>
+            <div class="">
+            <a href="#" class="prev"><</a>
+
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">...</a>
+           
+            <a href="#">10</a>
+            <a href="#" class="next text-semibold">></a>
+          </div>
+          <div class="flex items-center space-x-2 justify-end mr-[60px]">
+            <label for="pageInput" class="text-sm">Go To Page</label>
+            <input type="text" id="pageInput" class="w-9 h-6 border border-gray-300 rounded px-2">
+            <div class="text-lg cursor-pointer" id="goToPage">></div>
+          </div>
+          
+          
+          </div>
+          <script src="script.js"></script>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
